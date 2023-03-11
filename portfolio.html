@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Commpatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,0">
+    <title>Akenami - Portfolio</title> 
+    <link rel="stylesheet" href="portfolioStyle.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class = "logo"><a href="#top">Akenami</a></div>
+            <ul>
+                <li> <a href="#prev">Previous Work</a></li>
+                <li> <a href="#prices">Prices</a></li>
+                <li> <a href="#Req">Request</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="majorProject"> 
+
+                <div class = "header-box" id="top">
+            <h2>Art Commissions</h2>
+            <p> Character Designs for D&D and other uses</p>
+        </div>
+
+    </div>
+
+
+<div class="majorProject" id="prev"> 
+    <h3>Previous Commissions</h3>
+    <div class="projectBox"> 
+
+        <div class="elfsight-app-c5bbc658-6664-428a-ab4f-7ad1a82c8d6f"></div>
+    </div>
+</div>
+
+<div class="majorProject" id="prices"> 
+    <h3>Prices Of Commissions</h3>
+
+    <div class="projectBox"> 
+
+
+        <div class="project-content">
+            <h5>Portrait</h5>
+            <ul>
+                <li>Sketch: £20</li>
+                <li>Line Art: £35</li>
+                <li>Full Render: £50</li>
+            </ul>
+        </div>
+
+        <div class="project-content">
+            <h5>Waist Up Design</h5>
+            <ul>
+                <li>Sketch: £30</li>
+                <li>Line Art: £45</li>
+                <li>Full Render: £60</li>
+            </ul>
+        </div>
+
+        <div class="project-content">
+            <h5>Full Body Design</h5>
+            <ul>
+                <li>Sketch: £40</li>
+                <li>Line Art: £55</li>
+                <li>Full Render: £70</li>
+            </ul>
+        </div>
+</div>
+</div>
+
+<div class="fcf-body">
+    <h3 class="fcf-h3" id="Req">Request</h3>
+    <div class="form-left">
+    <div id="fcf-form">
+    <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+        <div class="fcf-form-group">
+            <label for="Name" class="fcf-label">Your name</label>
+            <div class="fcf-input-group">
+                <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+            </div>
+        </div>
+        <div class="fcf-form-group">
+            <label class="fcf-label" for="Email">Your email address</label>
+            <div class="fcf-input-group">
+                <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <label class="fcf-label">Type</label>
+            <div class="fcf-input-group">
+                <select name="type" id="type" class="form-dd" onchange="changePic()" required>
+                    <option value="Portrait" >Portrait</option>
+                    <option value="WUD">Waist Up Design</option>
+                    <option value="FBD">Full Body Design</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <label class="fcf-label">Style</label>
+            <div class="fcf-input-group">
+                <select name="style" id="style" class="form-dd" onchange="changePic()"  required>
+                    <option value="Sketch" >Sketch</option>
+                    <option value="LA">Line Art</option>
+                    <option value="FR" >Full Render</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <label for="Message" class="fcf-label">Your message</label>
+            <div class="fcf-input-group">
+                <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+        </div>
+    </form>
+    </div>
+    </div>
+    <div class="line"></div>
+    <div class="form-right">
+        <h2>Example</h2>
+        <img src="widepeepoHappy1.png" id="pic">
+    </div>
+</div>
+
+
+<footer>
+<div class="center logo">
+    <p>Akenami</p>
+</div>
+    <div>
+        <ul>
+            <li> <a href="#prev">Previous Work</a></li>
+            <li> <a href="#prices">Prices</a></li>
+            <li> <a href="#Req">Request</a></li>
+        </ul>
+    </div>
+</footer>
+
+    
+<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+
+<script>
+function changePic() {
+    let style = document.getElementById("style").value;
+    let type = document.getElementById("type").value;
+
+    if( type == "Portrait" && style == "Sketch" ){
+        document.getElementById("pic").src="widepeepoHappy1.png";
+    }
+    else if( type == "Portrait" && style == "LA"){
+        document.getElementById("pic").src="widepeepoHappy2.png";
+    }
+    else if( type == "Portrait" && style == "FR"){
+        document.getElementById("pic").src="widepeepoHappy3.png";
+    }
+    else if(type == "WUD" && style == "Sketch"  ){
+        document.getElementById("pic").src="widepeepoHappy1.png";
+    }
+    else if(type == "WUD" && style == "LA"  ){
+        document.getElementById("pic").src="widepeepoHappy2.png";        
+    }
+    else if(type == "WUD" && style == "FR" ){
+        document.getElementById("pic").src="widepeepoHappy3.png";    
+    }
+    else if(type == "FBD" && style == "Sketch"  ){
+        document.getElementById("pic").src="widepeepoHappy1.png";
+    }
+    else if(type == "FBD" && style == "LA"  ){        
+        document.getElementById("pic").src="widepeepoHappy2.png";
+    }
+    else if(type == "FBD" && style == "FR" ){
+        document.getElementById("pic").src="widepeepoHappy3.png";
+
+    }
+}
+</script>
+
+</body>
+</html>
+
